@@ -11,5 +11,5 @@ def get_product_sizes(page):
         return sizes
 
     except Exception as e:
-        print("Failed to get sizes:", e)
+        # print("Failed to get sizes:", e)
         return []

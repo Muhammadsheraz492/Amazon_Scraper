@@ -14,5 +14,5 @@ def get_bullets(page):
                 bullets_list.append(text)
         return bullets_list
     except Exception as e:
-        print("Failed to get bullets:", e)
+        # print("Failed to get bullets:", e)
         return []

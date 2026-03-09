@@ -17,5 +17,5 @@ def get_product_details(page):
                 data[key] = value
         return data
     except Exception as e:
-        print("Failed to get product details:", e)
+        # print("Failed to get product details:", e)
         return {}

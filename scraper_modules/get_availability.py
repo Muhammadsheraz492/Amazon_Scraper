@@ -8,5 +8,5 @@ def get_availability(page):
         availability = page.locator("#availability span").inner_text().strip()
         return availability
     except Exception as e:
-        print("Failed to get availability:", e)
+        # print("Failed to get availability:", e)
         return ""

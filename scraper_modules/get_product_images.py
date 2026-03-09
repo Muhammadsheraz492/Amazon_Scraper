@@ -27,5 +27,5 @@ def get_product_images(page):
         return image_urls
 
     except Exception as e:
-        print("Failed to get images:", e)
+        # print("Failed to get images:", e)
         return []
