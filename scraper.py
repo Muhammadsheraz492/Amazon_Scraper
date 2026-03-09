@@ -1,89 +1,101 @@
 from playwright.sync_api import sync_playwright
-import pandas as pd # type: ignore
 import re
-url = "https://a.co/d/0223Wvxd"
+import json
 
-with sync_playwright() as p:
-    browser = p.chromium.launch(headless=False)
-    page = browser.new_page()
-    page.goto(url)
-    page.wait_for_selector("#productTitle")
-    title = page.locator("span#productTitle").inner_text().strip()
-    print("Product Title:",title);
-    page.wait_for_selector("#altImages")
-    # html = page.locator("#altImages").inner_html()
-    images = page.locator("#altImages li.imageThumbnail img")
-    count = images.count()
-    image_urls = []
-    for i in range(count):
-        src = images.nth(i).get_attribute("src")
-        if src and "play-button" not in src:
-            image_urls.append(src)
-    more_button = page.locator("#altImages li.overlayRestOfImages")
-    image_urls = []
-    if more_button.count() > 0:
-        more_button.click()
-        page.wait_for_selector("#ivThumbs")
-        thumbs = page.locator("#ivThumbs .ivThumbImage")
-        for i in range(thumbs.count()):
-            style_attr = thumbs.nth(i).get_attribute("style")
-            if style_attr:
-                match = re.search(r'url\("([^"]+)"\)', style_attr)
-                if match:
-                    url_highres = match.group(1).replace("_AC_US100_AA50_", "_AC_SL1500_")
-                    image_urls.append(url_highres)
-    for img in image_urls:
-        print(img)
-        
-    page.wait_for_selector("#tp-inline-twister-dim-values-container")
+def run_scraper(urls):
 
-    size_elements = page.locator(
-        "#tp-inline-twister-dim-values-container li.swatch-list-item-text .swatch-title-text-display"
-    )
-    sizes = [size_elements.nth(i).inner_text().strip() for i in range(size_elements.count())]
+    all_products = []
 
-    print("Available Sizes:",len(sizes))
-    for s in sizes:
-        print(s)
-    page.wait_for_selector(".po-brand")
+    with sync_playwright() as p:
 
-    rows = page.locator("table.a-normal tr")
+        browser = p.chromium.launch(headless=False)
+        context = browser.new_context(storage_state="amazon_login.json")
+        page = context.new_page()
 
-    data = {}
+        for url in urls:
 
-    for i in range(rows.count()):
-        row = rows.nth(i)
+            print("Scraping:", url)
+            page.goto(url)
+            page.wait_for_selector("#productTitle")
+            title = page.locator("span#productTitle").inner_text().strip()
+            print("Product Title:",title);
+            page.wait_for_selector("#altImages")
+            # html = page.locator("#altImages").inner_html()
+            images = page.locator("#altImages li.imageThumbnail img")
+            count = images.count()
+            image_urls = []
+            for i in range(count):
+                src = images.nth(i).get_attribute("src")
+                if src and "play-button" not in src:
+                    image_urls.append(src)
+            more_button = page.locator("#altImages li.overlayRestOfImages")
+            image_urls = []
+            if more_button.count() > 0:
+                more_button.click()
+                page.wait_for_selector("#ivThumbs")
+                thumbs = page.locator("#ivThumbs .ivThumbImage")
+                for i in range(thumbs.count()):
+                    style_attr = thumbs.nth(i).get_attribute("style")
+                    if style_attr:
+                        match = re.search(r'url\("([^"]+)"\)', style_attr)
+                        if match:
+                            url_highres = match.group(1).replace("_AC_US100_AA50_", "_AC_SL1500_")
+                            image_urls.append(url_highres)
+            for img in image_urls:
+                print(img)
+                
+            page.wait_for_selector("#tp-inline-twister-dim-values-container")
 
-        key = row.locator("td").nth(0).inner_text().strip()
-        value = row.locator("td").nth(1).inner_text().strip()
+            size_elements = page.locator(
+                "#tp-inline-twister-dim-values-container li.swatch-list-item-text .swatch-title-text-display"
+            )
+            sizes = [size_elements.nth(i).inner_text().strip() for i in range(size_elements.count())]
 
-        data[key] = value
+            print("Available Sizes:",len(sizes))
+            for s in sizes:
+                print(s)
+            page.wait_for_selector(".po-brand")
 
-    print("\nProduct Details:\n")
+            rows = page.locator("table.a-normal tr")
 
-    for k, v in data.items():
-        print(f"{k}: {v}")
-    page.wait_for_selector("#feature-bullets ul")
+            data = {}
 
-    bullets = page.locator("#feature-bullets ul li span.a-list-item")
-    bullet_texts = [bullets.nth(i).inner_text().strip() for i in range(bullets.count())]
+            for i in range(rows.count()):
+                row = rows.nth(i)
 
-    print("\nAbout This Item:\n")
-    for b in bullet_texts:
-        print("-", b)
-    
-    excel_data = {
-        "Title": title,
-        "Images": ", ".join(image_urls),
-        "Sizes": ", ".join(sizes),
-        "About Item": " | ".join(bullet_texts)
-    }
-    for k, v in data.items():
-        excel_data[k] = v
+                key = row.locator("td").nth(0).inner_text().strip()
+                value = row.locator("td").nth(1).inner_text().strip()
 
-    df = pd.DataFrame([excel_data])
+                data[key] = value
 
-    df.to_excel("amazon_product.xlsx", index=False)
+            print("\nProduct Details:\n")
 
-    print("Data saved to amazon_product.xlsx")
-    browser.close()
+            for k, v in data.items():
+                print(f"{k}: {v}")
+            page.wait_for_selector("#feature-bullets ul")
+
+            bullets = page.locator("#feature-bullets ul li span.a-list-item")
+            bullet_texts = [bullets.nth(i).inner_text().strip() for i in range(bullets.count())]
+
+            print("\nAbout This Item:\n")
+            for b in bullet_texts:
+                print("-", b)
+            
+            excel_data = {
+                "url":url,
+                "Title": title,
+                "Images": ", ".join(image_urls),
+                "Sizes": ", ".join(sizes),
+                "About Item": " | ".join(bullet_texts)
+            }
+            for k, v in data.items():
+                excel_data[k] = v
+
+            all_products.append(excel_data)
+
+        browser.close()
+
+    with open("amazon_products.json", "w", encoding="utf-8") as f:
+        json.dump(all_products, f, indent=4, ensure_ascii=False)
+
+    print("Saved all products!")
