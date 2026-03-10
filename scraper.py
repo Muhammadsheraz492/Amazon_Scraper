@@ -17,7 +17,7 @@ def run_scraper(urls):
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         context = browser.new_context(storage_state="amazon_login.json")
         page = context.new_page()
 
@@ -38,11 +38,11 @@ def run_scraper(urls):
             availability = get_availability(page)
             title = get_title(page)
             sizes = get_product_sizes(page)
-            image_urls = get_product_images(page)
             
           
             product_data = get_product_details(page)
             bullet_texts = get_bullets(page)
+            image_urls = get_product_images(page)
             
             excel_data = {
                 "Url":url,
