@@ -15,7 +15,7 @@ def run_scraper(urls):
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch(headless=False)
         context = browser.new_context(storage_state="amazon_login.json")
         page = context.new_page()
 
@@ -27,14 +27,16 @@ def run_scraper(urls):
             if response and response.status == 404:
                 print("❌ Page not found (404), skipping...")
                 continue
-            title = get_title(page)
-            image_urls = get_product_images(page)
-            sizes = get_product_sizes(page)
             current_price = get_current_price(page)            
             list_price = get_list_price(page)
             availability = get_availability(page)
+            title = get_title(page)
+            sizes = get_product_sizes(page)
+          
             product_data = get_product_details(page)
             bullet_texts = get_bullets(page)
+            image_urls = get_product_images(page)
+            
             excel_data = {
                 "Url":url,
                 "Title": title,
@@ -49,6 +51,8 @@ def run_scraper(urls):
                 excel_data[k] = v
 
             all_products.append(excel_data)
+            
+            input("Next Product")
 
         browser.close()
 

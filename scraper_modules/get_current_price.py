@@ -1,28 +1,28 @@
-
 def get_current_price(page):
     """
     Extracts the current price of the product.
-    1. Try .priceToPay (whole + fraction)
-    2. Fallback to .a-text-price .a-offscreen
-    Returns a string like "$32.99". If not found, returns empty string.
+
+    1. Try .priceToPay (symbol + whole + fraction)
+    2. Fallback to .a-price .a-offscreen
+    3. Return empty string if not found
     """
 
     try:
-        whole_locator = page.locator(".priceToPay .a-price-whole")
-        fraction_locator = page.locator(".priceToPay .a-price-fraction")
+        price_block = page.locator(".priceToPay").first
 
-        if whole_locator.count() > 0 and fraction_locator.count() > 0:
-            whole = whole_locator.first.inner_text().strip().replace("\n", "")
-            fraction = fraction_locator.first.inner_text().strip()
-            return f"${whole}{fraction}"
+        symbol = price_block.locator(".a-price-symbol").inner_text().strip()
+        whole = price_block.locator(".a-price-whole").inner_text().strip().replace("\n", "")
+        fraction = price_block.locator(".a-price-fraction").inner_text().strip()
+
+        if whole and fraction:
+            return f"{symbol}{whole}{fraction}"
 
     except Exception:
         pass
 
-    # Fallback price
+    # Fallback
     try:
-        price = page.locator(".a-text-price .a-offscreen").first.inner_text().strip()
+        price = page.locator(".a-price .a-offscreen").first.inner_text().strip()
         return price
-    except Exception as e:
-        # print("Failed to get current price:", e)
+    except Exception:
         return ""
