@@ -3,8 +3,8 @@
         "Url": "https://a.co/d/0223Wvxd",
         "Title": "DUMOS Arched Full Length Mirror with Stand Floor Standing Aluminum Frame for Bedroom Body Hanging Leaning Modern Simple Home Decor Shatter-Proorf Nano Glass Wall Living Room Cloakroom Black 56\"x15\"",
         "Images": [
-            "https://m.media-amazon.com/images/I/516JoCTTNvL._AC_US100_.jpg",
-            "https://m.media-amazon.com/images/I/41KYLbCUwCL._AC_US100_.jpg",
+            "https://m.media-amazon.com/images/I/51q3i1PniWL._AC_US100_.jpg",
+            "https://m.media-amazon.com/images/I/41eaiT8Iz9L._AC_US100_.jpg",
             "https://m.media-amazon.com/images/I/51TINGg3mSL._AC_US100_.jpg",
             "https://m.media-amazon.com/images/I/41ljlcoan4L._AC_US100_.jpg",
             "https://m.media-amazon.com/images/I/41HI+IijQxL._AC_US100_.jpg",
@@ -40,19 +40,19 @@
             },
             {
                 "size": "57.3\"L x 18.4\"W",
-                "price": "$59.99"
+                "price": "$49.99"
             },
             {
                 "size": "58\"L x 19\"W",
-                "price": "$59.99"
+                "price": "$49.99"
             },
             {
                 "size": "59\"L x 16\"W",
-                "price": "$59.99"
+                "price": "$49.99"
             },
             {
                 "size": "59.1\"L x 15.8\"W",
-                "price": "$59.99"
+                "price": "$49.99"
             },
             {
                 "size": "63.6\"L x 20.6\"W",
@@ -68,7 +68,7 @@
             },
             {
                 "size": "65\"L x 24\"W",
-                "price": "$55.95"
+                "price": "$46.89"
             },
             {
                 "size": "66.9\"L x 25.4\"W",
@@ -76,21 +76,21 @@
             },
             {
                 "size": "68\"L x 26\"W",
-                "price": "$79.99"
+                "price": "$119.99"
             },
             {
                 "size": "70.4\"L x 25.6\"W",
-                "price": "$79.99"
+                "price": "$74.99"
             },
             {
                 "size": "71\"L x 26\"W",
-                "price": "$79.99"
+                "price": "$139.99"
             }
         ],
         "About_Item": [
             "Glass",
-            "【Oversized Full-Length Mirror】This full body mirror delivers a clear head-to-toe reflection with distortion-free glass. It’s a practical must-have and stylish decor upgrade for your bedroom, living room, closet, home gym and more",
-            "【Shatterproof & Long-Lasting Quality】Built with nano tempered glass and a solid aluminum alloy frame, this floor mirror is stronger and safer than ordinary glass. It’s shatter-resistant, fade-proof, and durable, ensuring years of crystal-clear reflection without worry.",
+            "Mirror Full Length: The size of the full length mirror is 71\"x26\". The large size of the mirror allows you to display your whole body easily, with a simple and precise design, rectangular/arched vertical frame, clean and smooth surface, and beautifully styled also makes your space more beautiful.",
+            "High-tech Materials: Full body mirror is made of superior nano tempered glass and one piece aluminum alloy frame that can effectively avoid cracking, it is sturdy, durable, anti-faded and shatterproof. Mirror high-definition imaging is not distorted, so you can keep a good mood throughout the day!",
             "Wall & Stand: Full body mirror can be used in a variety of ways, it can be stand on the floor, leaned against the wall, or hung on the wall without taking up more space, in addition, it is equipped with a screws kit, which allows the mirror to be fixed firmly to avoid falling off by touching it.",
             "No Assembly Required: Floor mirror comes out of the box ready to use, no assembly required. Easily allows you to use a large, high-definition full body mirror. The frame has texture very thin and you can move it easily. It is suitable for bedroom, living room, checkroom, home gym, all kinds of rooms and so on.",
             "Customer Service Guarantee: Our aim is to provide high quality products. If our body mirror is damaged when it arrives, or you are not satisfied with our product, please contact us in time and we'll offer you 24 hours customer service.We will provide you with the best solution."
@@ -100,8 +100,35 @@
         "list_price": "",
         "Brand": "DUMOS",
         "Room Type": "Bedroom, Dressing Room, Living Room",
-        "Shape": "Arched-top",
-        "Product Dimensions": "65\"L x 24\"W",
+        "Shape": "Semicircular",
+        "Product Dimensions": "71\"L x 26\"W",
         "Frame Material": "Aluminum"
+    },
+    {
+        "Url": "https://www.amazon.com/dp/B07FZ8S74R",
+        "Title": "Echo Dot (3rd Gen, 2018 release) - Smart speaker with Alexa - Charcoal",
+        "Images": [
+            "https://m.media-amazon.com/images/I/515EDfBsGvL._AC_US40_.jpg",
+            "https://m.media-amazon.com/images/I/41CRnvYqmqL._AC_US40_.jpg",
+            "https://m.media-amazon.com/images/I/41evY-7YkBL._AC_US40_.jpg",
+            "https://m.media-amazon.com/images/I/51Ya5fxJjiL._AC_US40_.jpg",
+            "https://m.media-amazon.com/images/I/41IQM7vbryL._AC_US40_.jpg",
+            "https://m.media-amazon.com/images/I/51W8fm5ZTrL._AC_US40_.jpg",
+            "https://m.media-amazon.com/images/I/51MpRsiaLeL._AC_US40_.jpg"
+        ],
+        "Sizes": [],
+        "About_Item": [
+            "MEET ECHO DOT - Our most compact smart speaker that fits perfectly into small spaces.",
+            "RICH AND LOUD SOUND - Better speaker quality than Echo Dot Gen 2 for richer and louder sound. Pair with a second Echo Dot for stereo sound.",
+            "ALEXA HELPS YOU DO MORE WITH PRIME - Listen to millions of songs with Amazon Music, use your voice to for 2-day shipping, listen to audiobooks on Audible, and much more.",
+            "MAKE YOUR LIFE EASIER - Alexa can set timers, check the weather, read the news, adjust thermostats, answer questions, and more to help with daily tasks.",
+            "DESIGNED TO PROTECT YOUR PRIVACY – Built with multiple layers of privacy controls including the ability to delete your recordings, mute your mic, and more in-app privacy controls.",
+            "CONTROL MUSIC WITH A SIMPLE PHRASE - Echo Dot allows you to stream songs from Amazon Music, Apple Music, Spotify, SiriusXM, and others, as well as via Bluetooth. Voice control with Alexa makes it easy to skip to the next song, adjust the volume, and pause without getting up.",
+            "CONNECT WITH OTHERS HANDS-FREE - Call friends and family who have the Alexa app or an Echo device. Instantly drop in on other rooms or announce to the whole house that dinner's ready.",
+            "ALEXA HAS SKILLS - With tens of thousands of skills and counting, Alexa is always getting smarter and adding new skills like tracking fitness, playing games, and more."
+        ],
+        "current_price": "$39.19",
+        "Availability": "In Stock",
+        "list_price": ""
     }
 ]

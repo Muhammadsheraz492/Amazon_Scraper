@@ -7,7 +7,6 @@ def get_product_colors(page):
     try:
         page.wait_for_selector("#tp-inline-twister-dim-values-container")
 
-        # expand hidden options if present
         if page.locator("#cx-expander").count() > 0:
             page.locator("#cx-expander").click()
 

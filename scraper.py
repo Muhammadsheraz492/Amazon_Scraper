@@ -9,6 +9,8 @@ from scraper_modules.get_bullets import get_bullets
 from scraper_modules.get_current_price import get_current_price
 from scraper_modules.get_list_price import get_list_price
 from scraper_modules.get_availability import get_availability
+from scraper_modules.get_product_colors import get_product_colors
+
 def run_scraper(urls):
 
     all_products = []
@@ -23,6 +25,10 @@ def run_scraper(urls):
 
             print("Scraping:", url)
             page.goto(url)
+            # colors = get_product_colors(page)
+
+            # print(colors)
+            
             response = page.goto(url)
             if response and response.status == 404:
                 print("❌ Page not found (404), skipping...")
@@ -32,10 +38,11 @@ def run_scraper(urls):
             availability = get_availability(page)
             title = get_title(page)
             sizes = get_product_sizes(page)
+            image_urls = get_product_images(page)
+            
           
             product_data = get_product_details(page)
             bullet_texts = get_bullets(page)
-            image_urls = get_product_images(page)
             
             excel_data = {
                 "Url":url,
@@ -51,8 +58,6 @@ def run_scraper(urls):
                 excel_data[k] = v
 
             all_products.append(excel_data)
-            
-            input("Next Product")
 
         browser.close()
 
