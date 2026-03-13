@@ -1,62 +1,24 @@
-from .get_current_price import get_current_price
+import re
+import json5
 
-def get_product_colors(page):
+file_path = "amazontesting_raw.txt"
 
-    results = []
+with open(file_path, "r", encoding="utf-8") as f:
+    content = f.read()
 
-    try:
-        page.wait_for_selector("#tp-inline-twister-dim-values-container")
+# Extract the JS object assigned to dataToReturn
+match = re.search(r'var\s+dataToReturn\s*=\s*({[\s\S]*?})\s*;', content)
 
-        # expand hidden options if present
-        if page.locator("#cx-expander").count() > 0:
-            page.locator("#cx-expander").click()
+if not match:
+    print("dataToReturn not found")
+    exit()
 
-        colors = page.locator(
-            "#tp-inline-twister-dim-values-container li.dimension-value-list-item-square-image"
-        )
+json_text = match.group(1)
+json_text = re.sub(r'"\s*\+\s*"', '', json_text)
+json_text = re.sub(r',(\s*[}\]])', r'\1', json_text)
+json_text = json_text.replace("\n", " ")
+data = json5.loads(json_text)
 
-        count = colors.count()
-
-        for i in range(count):
-
-            try:
-                color_item = colors.nth(i)
-
-                # skip hidden
-                style = color_item.get_attribute("style") or ""
-                if "display: none" in style:
-                    continue
-
-                # skip unavailable
-                if color_item.locator(".a-button-unavailable").count() > 0:
-                    continue
-
-                img = color_item.locator("img.swatch-image").first
-
-                if img.count() == 0:
-                    continue
-
-                color_name = img.get_attribute("alt")
-
-                button = color_item.locator("input.a-button-input").first
-
-                button.scroll_into_view_if_needed()
-                button.click()
-
-                page.wait_for_timeout(1500)
-
-                price = get_current_price(page)
-
-                results.append({
-                    "color": color_name,
-                    "price": price
-                })
-
-            except Exception as e:
-                print(f"Error processing color {i}:", e)
-
-        return results
-
-    except Exception as e:
-        print("Color scraping error:", e)
-        return []
+print("Parsed successfully")
+print(data["dimensions"])
+print(data["dimensionValuesDisplayData"])

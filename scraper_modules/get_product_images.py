@@ -1,23 +1,23 @@
 import re
 
-def get_product_images(page):
+async def get_product_images(page):
     try:
-        page.wait_for_selector("#altImages", timeout=5000)
+        await page.wait_for_selector("#altImages", timeout=5000)
 
         images = page.locator("#altImages li.imageThumbnail img")
         image_urls = []
-        for i in range(images.count()):
-            src = images.nth(i).get_attribute("src")
+        for i in range(await images.count()):
+            src = await images.nth(i).get_attribute("src")
             if src and "play-button" not in src:
                 image_urls.append(src)
 
         more_button = page.locator("#altImages li.overlayRestOfImages")
-        if more_button.count() > 0:
-            more_button.click()
-            page.wait_for_selector("#ivThumbs", timeout=5000)
+        if await more_button.count() > 0:
+            await more_button.click()
+            await page.wait_for_selector("#ivThumbs", timeout=5000)
             thumbs = page.locator("#ivThumbs .ivThumbImage")
-            for i in range(thumbs.count()):
-                style_attr = thumbs.nth(i).get_attribute("style")
+            for i in range(await thumbs.count()):
+                style_attr = await thumbs.nth(i).get_attribute("style")
                 if style_attr:
                     match = re.search(r'url\("([^"]+)"\)', style_attr)
                     if match:
