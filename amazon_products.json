@@ -1,81 +1,227 @@
 [
     {
-        "link": "https://www.amazon.com/dp/B0823MDHDJ?ref=cm_sw_r_cso_cp_apin_dp_SDK6SDW5NPMWR2ZKY5MK&ref_=cm_sw_r_cso_cp_apin_dp_SDK6SDW5NPMWR2ZKY5MK&social_share=cm_sw_r_cso_cp_apin_dp_SDK6SDW5NPMWR2ZKY5MK&th=1",
-        "current_price": "$159.00",
-        "list_price": "",
+        "link": "https://a.co/d/0223Wvxd",
+        "current_price": "$32.97",
+        "list_price": "$49.99",
         "availability": "In Stock",
-        "title": "SLOWPLAY 14g Clay Poker Chips Set for Texas Hold'em, 500 PCS, with Numbered Values, Art Deco Style, and Carrying Case",
+        "title": "DUMOS Arched Full Length Mirror with Stand Floor Standing Aluminum Frame for Bedroom Body Hanging Leaning Modern Simple Home Decor Shatter-Proorf Nano Glass Wall Living Room Cloakroom Black 56\"x15\"",
         "image_urls": [
-            "https://m.media-amazon.com/images/I/51hGndN7-zL._AC_US40_.jpg",
-            "https://m.media-amazon.com/images/I/410q2Xqj4AL._AC_US40_.jpg",
-            "https://m.media-amazon.com/images/I/51nocV1DqQL._AC_US40_.jpg",
-            "https://m.media-amazon.com/images/I/51YqBuRKV5L._AC_US40_.jpg",
-            "https://m.media-amazon.com/images/I/41ZvFtp5DkL._AC_US40_.jpg",
-            "https://m.media-amazon.com/images/I/51OHpa9M48L._AC_US40_.jpg"
+            "https://m.media-amazon.com/images/I/41WWWUsearL._AC_US100_.jpg",
+            "https://m.media-amazon.com/images/I/41f6GMLi9fL._AC_US100_.jpg",
+            "https://m.media-amazon.com/images/I/410LQS1YdML._AC_US100_.jpg",
+            "https://m.media-amazon.com/images/I/41kkWRemjdL._AC_US100_.jpg",
+            "https://m.media-amazon.com/images/I/51hO0Z8pGhL._AC_US100_.jpg",
+            "https://m.media-amazon.com/images/I/41disSIFKPL._AC_US100_.jpg",
+            "https://m.media-amazon.com/images/I/41WWWUsearL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/41f6GMLi9fL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/410LQS1YdML._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/41kkWRemjdL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/51hO0Z8pGhL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/41disSIFKPL._AC_SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/41LnNUlwVGL._AC_SL1500_.jpg"
         ],
         "status": "Scraped",
-        "asin": "B0823MDHDJ",
+        "asin": "B0G6KD54ZK",
         "variant_keys": [
             "color_name",
             "size_name"
         ],
         "variants": {
-            "B0823LZ799": {
-                "color_name": "Black Gold",
-                "size_name": "300PCS Numbered Full Set (1, 5, 25, 100, 500)"
+            "B0G6KD2862": {
+                "color_name": "Gold-rect Edge",
+                "size_name": "55.5\"L x 14.6\"W",
+                "current_price": "$29.97"
             },
-            "B07ZM56Y3C": {
-                "color_name": "Black Gold",
-                "size_name": "500PCS Non-Numbered Set"
+            "B0DP95MDJ5": {
+                "color_name": "Rect-black",
+                "size_name": "70.4\"L x 25.6\"W",
+                "current_price": "$99.92"
             },
-            "B0FM7YZ99F": {
-                "color_name": "White Gold",
-                "size_name": "500PCS Non-Numbered Set"
+            "B0G6JSHRGW": {
+                "color_name": "Black-rect Edge",
+                "size_name": "55.5\"L x 14.6\"W",
+                "current_price": "$31.99"
             },
-            "B0FM7XC9D4": {
-                "color_name": "White Gold",
-                "size_name": "500PCS Numbered Full Set (1,5,25,100,500,1000)"
+            "B0G6JZW2X8": {
+                "color_name": "Gold-rounded",
+                "size_name": "64.4\"L x 23.4\"W",
+                "current_price": "$79.99"
             },
-            "B0FM7X1PQQ": {
-                "color_name": "White Gold",
-                "size_name": "500PCS Numbered Core Set (5, 25, 100, 500)"
+            "B0GJSPT3CL": {
+                "color_name": "Black-rect Edge",
+                "size_name": "56\"L x 21\"W",
+                "current_price": "$59.99"
             },
-            "B07ZM4KFH1": {
-                "color_name": "Black Gold",
-                "size_name": "300PCS Non-Numbered Set"
+            "B0GJSHPXYK": {
+                "color_name": "Gold-rect Edge",
+                "size_name": "56\"L x 15\"W",
+                "current_price": "$49.99"
             },
-            "B0FD3LNN4Q": {
-                "color_name": "Black Gold",
-                "size_name": "300PCS Numbered Core Set (5, 25, 100)"
+            "B0GJSRM16L": {
+                "color_name": "Black-rounded",
+                "size_name": "68\"L x 26\"W",
+                "current_price": "$74.99"
             },
-            "B0FD3NBH1X": {
-                "color_name": "Black Gold",
-                "size_name": "500PCS Numbered Core Set (5, 25, 100, 500)"
+            "B0G6KLV215": {
+                "color_name": "Gold-rect Edge",
+                "size_name": "64.4\"L x 23.4\"W",
+                "current_price": "$79.99"
             },
-            "B0823MDHDJ": {
-                "color_name": "Black Gold",
-                "size_name": "500PCS Numbered Full Set (1,5,25,100,500,1000)"
+            "B0FGXBPYDM": {
+                "color_name": "Natural Black-arched",
+                "size_name": "70.4\"L x 25.6\"W",
+                "current_price": ""
             },
-            "B0FM7SSHDB": {
-                "color_name": "White Gold",
-                "size_name": "300PCS Non-Numbered Set"
+            "B0G6JNXCQS": {
+                "color_name": "Black-rect Edge",
+                "size_name": "57.3\"L x 18.4\"W",
+                "current_price": "$59.99"
             },
-            "B0FM828NM5": {
-                "color_name": "White Gold",
-                "size_name": "300PCS Numbered Core Set (5, 25, 100)"
+            "B0G6KQKW1R": {
+                "color_name": "Black-rect Edge",
+                "size_name": "55.3\"L x 20.4\"W",
+                "current_price": "$49.99"
             },
-            "B0FM7ZF7PR": {
-                "color_name": "White Gold",
-                "size_name": "300PCS Numbered Full Set (1, 5, 25, 100, 500)"
+            "B0G6KJ4NVC": {
+                "color_name": "Black-rect Edge",
+                "size_name": "66.9\"L x 25.4\"W",
+                "current_price": "$64.99"
+            },
+            "B0GJSHP688": {
+                "color_name": "Gold-rect Edge",
+                "size_name": "65\"L x 24\"W",
+                "current_price": "$46.99"
+            },
+            "B0DP95R2WL": {
+                "color_name": "Rect-black",
+                "size_name": "64\"L x 21\"W",
+                "current_price": "$48.77"
+            },
+            "B0G6K5PCYB": {
+                "color_name": "Gold-rounded",
+                "size_name": "57.3\"L x 18.4\"W",
+                "current_price": "$59.99"
+            },
+            "B0G6K5QC2Y": {
+                "color_name": "Gold-rect Edge",
+                "size_name": "57.3\"L x 18.4\"W",
+                "current_price": "$59.99"
+            },
+            "B0G6KCF2FR": {
+                "color_name": "Gold-rect Edge",
+                "size_name": "55.3\"L x 20.4\"W",
+                "current_price": "$59.99"
+            },
+            "B0G6JT3BGN": {
+                "color_name": "Black-rounded",
+                "size_name": "66.9\"L x 25.4\"W",
+                "current_price": ""
+            },
+            "B0G6K5F6T2": {
+                "color_name": "Gold-rect Edge",
+                "size_name": "66.9\"L x 25.4\"W",
+                "current_price": "$116.68"
+            },
+            "B0DP96G1YP": {
+                "color_name": "Black-arched",
+                "size_name": "64\"L x 21\"W",
+                "current_price": "$48.99"
+            },
+            "B0GJST8WMZ": {
+                "color_name": "Black-rect Edge",
+                "size_name": "58\"L x 19\"W",
+                "current_price": "$59.99"
+            },
+            "B0FFGRJ45K": {
+                "color_name": "Arched-natural Black",
+                "size_name": "59\"L x 16\"W",
+                "current_price": "$39.89"
+            },
+            "B0GJSNBM7P": {
+                "color_name": "Black-rect Edge",
+                "size_name": "56\"L x 15\"W",
+                "current_price": "$34.98"
+            },
+            "B0G6KCW639": {
+                "color_name": "Black-rounded",
+                "size_name": "64.4\"L x 23.4\"W",
+                "current_price": "$79.99"
+            },
+            "B0DP98WDM1": {
+                "color_name": "Rect-gold",
+                "size_name": "70.4\"L x 25.6\"W",
+                "current_price": "$79.85"
+            },
+            "B0GJSJV3TW": {
+                "color_name": "Gold-rounded",
+                "size_name": "58\"L x 19\"W",
+                "current_price": "$59.99"
+            },
+            "B0G6KP3518": {
+                "color_name": "Gold-rounded",
+                "size_name": "66.9\"L x 25.4\"W",
+                "current_price": "$69.97"
+            },
+            "B0DS1VJLYT": {
+                "color_name": "Arched-golden",
+                "size_name": "59.1\"L x 15.8\"W",
+                "current_price": ""
+            },
+            "B0GJSJN855": {
+                "color_name": "Gold-rounded",
+                "size_name": "65\"L x 24\"W",
+                "current_price": "$79.99"
+            },
+            "B0DP96W528": {
+                "color_name": "Rect-gold",
+                "size_name": "64\"L x 21\"W",
+                "current_price": "$42.92"
+            },
+            "B0G6K9M277": {
+                "color_name": "Black-rect Edge",
+                "size_name": "64.4\"L x 23.4\"W",
+                "current_price": "$55.95"
+            },
+            "B0G6KD54ZK": {
+                "color_name": "Black-rounded",
+                "size_name": "55.5\"L x 14.6\"W",
+                "current_price": "$32.97"
+            },
+            "B0FMXZPD3N": {
+                "color_name": "Gold-rounded",
+                "size_name": "63.6\"L x 20.6\"W",
+                "current_price": ""
+            },
+            "B0DS1VMVQP": {
+                "color_name": "Rect-dark Black",
+                "size_name": "59\"L x 16\"W",
+                "current_price": "$39.91"
+            },
+            "B0GJSR747C": {
+                "color_name": "Black-rounded",
+                "size_name": "65\"L x 24\"W",
+                "current_price": "$79.99"
+            },
+            "B0DP95NPLY": {
+                "color_name": "Gold-arched",
+                "size_name": "71\"L x 26\"W",
+                "current_price": "$99.92"
             }
         },
-        "product_data": {},
+        "product_data": {
+            "Brand": "DUMOS",
+            "Room Type": "Bedroom, Dressing Room, Living Room",
+            "Shape": "Arched-top",
+            "Product Dimensions": "55.51\"L x 14.57\"W",
+            "Frame Material": "Aluminum"
+        },
         "bullet_texts": [
-            "The first professional and hobbyist poker set. The SLOWPLAY engineering and design teams spent 18 months building this product, and every detail has been crafted with the upmost attention to help players enjoy the game that they love. It reflects good taste and fine quality, making the poker chips set an ideal gift for poker enthusiasts.",
-            "Chip Carrying Case: We’re re-defining what a good case should look like. The outer shell is made of German Polycarbonate material, crafted from one-piece injection molding, making it extremely durable. It also includes a custom aluminum alloy frame, zinc alloy lock, and large handle. The hand-made chips feature inner support, and PU leather packaging materials. Super portable with full-body black material.",
-            "Chips: Exquisite craftsmanship thanks to a double injection, iron core, and a weight of 14 grams. The design of the chip was inspired by the Art Deco style of the early 20th century. The symmetrical and simple geometric composition perfectly combine the grandeur of the roaring 1920s and contemporary simplicity to elevate the poker experience to a new level.",
-            "Quantity Ratio: Based on the actual usage ratio of the number of chips, the 300-chip set meets the needs of a 7-8 person game, and 500 chips easily meet the needs for 9-10 people.",
-            "Product details: 500 PCS FULL SET: $1-100 Chips, $5-150 Chips, $25-100 Chips, $100-100 Chips,$500-25 Chips,$1000-25 Chips. The diameter for each chip is 40mm.All poker sets include: 2 decks of SLOWPLAY plastic playing cards and 1 dealer. (We do not provide small blind and big blind button.)"
+            "Glass",
+            "【Oversized Full-Length Mirror】This full body mirror delivers a clear head-to-toe reflection with distortion-free glass. It’s a practical must-have and stylish decor upgrade for your bedroom, living room, closet, home gym and more",
+            "【Shatterproof & Long-Lasting Quality】Built with nano tempered glass and a solid aluminum alloy frame, this floor mirror is stronger and safer than ordinary glass. It’s shatter-resistant, fade-proof, and durable, ensuring years of crystal-clear reflection without worry.",
+            "【Three Placement Options】Enjoy maximum flexibility—stand it upright on the floor, lean it casually against the wall, or mount it securely to save space. A complete screw kit is included, making it easy to adapt the mirror to your room and lifestyle.",
+            "【Ready to Use, No Assembly Needed】Skip complicated setups—this bedroom floor mirror arrives fully assembled and ready to use. Its lightweight yet sturdy frame allows you to move it effortlessly, giving you the freedom to refresh your room layout whenever you like.",
+            "【Modern Design, Space-Saving Style】With its slim profile and minimalist frame, this mirror blends seamlessly into any décor. It adds both function and elegance to your space, making it an eye-catching accent while maximizing room efficiency."
         ]
     }
 ]

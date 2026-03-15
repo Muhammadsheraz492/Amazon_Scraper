@@ -7,18 +7,20 @@ from scraper_modules.upload_to_sheet import upload_to_sheet
 from scraper_modules.get_urls_from_sheet import get_urls_from_sheet
 
 
-# urls = get_urls_from_sheet(
-#     service_account_file="credentials.json",
-#     spreadsheet_name="Amazon Products",
-#     url_column="A"  
-# )
+urls = get_urls_from_sheet(
+    service_account_file="credentials.json",
+    spreadsheet_name="Amazon Products",
+    url_column="A"  
+)
+# print(urls)
+
 # "https://a.co/d/0223Wvxd"
 # print("URLs to scrape:", urls)
-urls=["https://www.amazon.com/dp/B0823MDHDJ?ref=cm_sw_r_cso_cp_apin_dp_SDK6SDW5NPMWR2ZKY5MK&ref_=cm_sw_r_cso_cp_apin_dp_SDK6SDW5NPMWR2ZKY5MK&social_share=cm_sw_r_cso_cp_apin_dp_SDK6SDW5NPMWR2ZKY5MK&th=1"]
-# urls=["https://a.co/d/04RiR9F2"]
-# ,"https://a.co/d/06NJJkSp"
+# urls=["https://a.co/d/0223Wvxd"]
+# # urls=["https://a.co/d/04RiR9F2"]
+# # ,"https://a.co/d/06NJJkSp"
 
-LOGIN_FILE = "amazon_login.json"
+# LOGIN_FILE = "amazon_login.json"
 
 # if not os.path.exists(LOGIN_FILE):
 #     print("Login session not found. Running login script...")
@@ -32,8 +34,8 @@ asyncio.run(run_scraper(urls))
 with open("amazon_products.json", "r", encoding="utf-8") as f:
     all_products = json.load(f)
 
-# upload_to_sheet(
-#     all_products,
-#     service_account_file="credentials.json",  
-#     spreadsheet_name="Amazon Products"         
-# )
+upload_to_sheet(
+    all_products,
+    service_account_file="credentials.json",  
+    spreadsheet_name="Amazon Products"         
+)

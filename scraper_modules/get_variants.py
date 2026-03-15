@@ -50,8 +50,8 @@ def get_variants(html_file):
                 for asin, values in variants_raw.items()
             }
 
-            print("Variant keys:", variant_keys)
-            print("Variants:", json.dumps(formatted_variants, indent=2))
+            # print("Variant keys:", variant_keys)
+            # print("Variants:", json.dumps(formatted_variants, indent=2))
 
             return variant_keys, formatted_variants
 
