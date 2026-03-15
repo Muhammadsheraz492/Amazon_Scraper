@@ -1,10 +1,81 @@
 [
     {
-        "link": "https://a.co/d/04RiR9F2",
-        "status": "Error: object str can't be used in 'await' expression"
-    },
-    {
-        "link": "https://a.co/d/06NJJkSp",
-        "status": "Error: object str can't be used in 'await' expression"
+        "link": "https://www.amazon.com/dp/B0823MDHDJ?ref=cm_sw_r_cso_cp_apin_dp_SDK6SDW5NPMWR2ZKY5MK&ref_=cm_sw_r_cso_cp_apin_dp_SDK6SDW5NPMWR2ZKY5MK&social_share=cm_sw_r_cso_cp_apin_dp_SDK6SDW5NPMWR2ZKY5MK&th=1",
+        "current_price": "$159.00",
+        "list_price": "",
+        "availability": "In Stock",
+        "title": "SLOWPLAY 14g Clay Poker Chips Set for Texas Hold'em, 500 PCS, with Numbered Values, Art Deco Style, and Carrying Case",
+        "image_urls": [
+            "https://m.media-amazon.com/images/I/51hGndN7-zL._AC_US40_.jpg",
+            "https://m.media-amazon.com/images/I/410q2Xqj4AL._AC_US40_.jpg",
+            "https://m.media-amazon.com/images/I/51nocV1DqQL._AC_US40_.jpg",
+            "https://m.media-amazon.com/images/I/51YqBuRKV5L._AC_US40_.jpg",
+            "https://m.media-amazon.com/images/I/41ZvFtp5DkL._AC_US40_.jpg",
+            "https://m.media-amazon.com/images/I/51OHpa9M48L._AC_US40_.jpg"
+        ],
+        "status": "Scraped",
+        "asin": "B0823MDHDJ",
+        "variant_keys": [
+            "color_name",
+            "size_name"
+        ],
+        "variants": {
+            "B0823LZ799": {
+                "color_name": "Black Gold",
+                "size_name": "300PCS Numbered Full Set (1, 5, 25, 100, 500)"
+            },
+            "B07ZM56Y3C": {
+                "color_name": "Black Gold",
+                "size_name": "500PCS Non-Numbered Set"
+            },
+            "B0FM7YZ99F": {
+                "color_name": "White Gold",
+                "size_name": "500PCS Non-Numbered Set"
+            },
+            "B0FM7XC9D4": {
+                "color_name": "White Gold",
+                "size_name": "500PCS Numbered Full Set (1,5,25,100,500,1000)"
+            },
+            "B0FM7X1PQQ": {
+                "color_name": "White Gold",
+                "size_name": "500PCS Numbered Core Set (5, 25, 100, 500)"
+            },
+            "B07ZM4KFH1": {
+                "color_name": "Black Gold",
+                "size_name": "300PCS Non-Numbered Set"
+            },
+            "B0FD3LNN4Q": {
+                "color_name": "Black Gold",
+                "size_name": "300PCS Numbered Core Set (5, 25, 100)"
+            },
+            "B0FD3NBH1X": {
+                "color_name": "Black Gold",
+                "size_name": "500PCS Numbered Core Set (5, 25, 100, 500)"
+            },
+            "B0823MDHDJ": {
+                "color_name": "Black Gold",
+                "size_name": "500PCS Numbered Full Set (1,5,25,100,500,1000)"
+            },
+            "B0FM7SSHDB": {
+                "color_name": "White Gold",
+                "size_name": "300PCS Non-Numbered Set"
+            },
+            "B0FM828NM5": {
+                "color_name": "White Gold",
+                "size_name": "300PCS Numbered Core Set (5, 25, 100)"
+            },
+            "B0FM7ZF7PR": {
+                "color_name": "White Gold",
+                "size_name": "300PCS Numbered Full Set (1, 5, 25, 100, 500)"
+            }
+        },
+        "product_data": {},
+        "bullet_texts": [
+            "The first professional and hobbyist poker set. The SLOWPLAY engineering and design teams spent 18 months building this product, and every detail has been crafted with the upmost attention to help players enjoy the game that they love. It reflects good taste and fine quality, making the poker chips set an ideal gift for poker enthusiasts.",
+            "Chip Carrying Case: We’re re-defining what a good case should look like. The outer shell is made of German Polycarbonate material, crafted from one-piece injection molding, making it extremely durable. It also includes a custom aluminum alloy frame, zinc alloy lock, and large handle. The hand-made chips feature inner support, and PU leather packaging materials. Super portable with full-body black material.",
+            "Chips: Exquisite craftsmanship thanks to a double injection, iron core, and a weight of 14 grams. The design of the chip was inspired by the Art Deco style of the early 20th century. The symmetrical and simple geometric composition perfectly combine the grandeur of the roaring 1920s and contemporary simplicity to elevate the poker experience to a new level.",
+            "Quantity Ratio: Based on the actual usage ratio of the number of chips, the 300-chip set meets the needs of a 7-8 person game, and 500 chips easily meet the needs for 9-10 people.",
+            "Product details: 500 PCS FULL SET: $1-100 Chips, $5-150 Chips, $25-100 Chips, $100-100 Chips,$500-25 Chips,$1000-25 Chips. The diameter for each chip is 40mm.All poker sets include: 2 decks of SLOWPLAY plastic playing cards and 1 dealer. (We do not provide small blind and big blind button.)"
+        ]
     }
 ]

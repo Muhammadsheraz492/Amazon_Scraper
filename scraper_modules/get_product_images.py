@@ -2,7 +2,8 @@ import re
 
 async def get_product_images(page):
     try:
-        await page.wait_for_selector("#altImages", timeout=5000)
+
+        await page.wait_for_selector("#altImages", timeout=10000)  # ✅ reduced from 30s to 10s
 
         images = page.locator("#altImages li.imageThumbnail img")
         image_urls = []
@@ -27,5 +28,5 @@ async def get_product_images(page):
         return image_urls
 
     except Exception as e:
-        # print("Failed to get images:", e)
-        return []
+        print(f"Failed to get images: {e}")  
+        return []  # ✅ never crashes, just returns empty list

@@ -13,6 +13,7 @@ from scraper_modules.get_list_price import get_list_price
 from scraper_modules.get_availability import get_availability
 from scraper_modules.get_product_colors import get_product_colors
 from scraper_modules.get_variants import get_variants
+from scraper_modules.handle_captcha import handle_captcha
 
 ZENROWS_API_KEY = "38b831b6d46b6fc43ff6d8d6697f5022c685939f"
 CONNECTION_URL = f"wss://browser.zenrows.com?apikey={ZENROWS_API_KEY}"
@@ -40,12 +41,28 @@ async def run_scraper(urls):
     all_products = []
 
     async with async_playwright() as p:
+        
 
-        browser = await p.chromium.connect_over_cdp(CONNECTION_URL)
-        context = browser.contexts[0] if browser.contexts else await browser.new_context()
-        page = await context.new_page()
 
         for url in urls:
+            browser = await p.chromium.connect_over_cdp(
+                "wss://browser.zenrows.com?apikey=38b831b6d46b6fc43ff6d8d6697f5022c685939f&proxy_country=us"
+            )
+            
+            if browser.contexts:
+                context = browser.contexts[0]
+            else:
+                context = await browser.new_context(ignore_https_errors=True)
+
+            page = await context.new_page()
+            # page = await context.new_page()
+            # browser = await p.chromium.launch(headless=False)
+            # context = await browser.new_context(    proxy={
+            #     "server": "http://api.zenrows.com:8001",
+            #     "username": "38b831b6d46b6fc43ff6d8d6697f5022c685939f",
+            #     "password": "autoparse=true"
+            # })
+            page = await context.new_page()
             print("Scraping:", url)
 
             try:
@@ -54,7 +71,7 @@ async def run_scraper(urls):
                 # print(colors)
 
                 # response = await page.goto(url)
-                response = await goto_with_retry(page, url)
+                response = await page.goto(url, wait_until="commit", timeout=30000)
                 if response is None:
                     all_products.append(dict(link=url, status="Failed"))
                     save_products(all_products)  # ✅ save even on failure
@@ -65,6 +82,7 @@ async def run_scraper(urls):
                     all_products.append(product)
                     save_products(all_products)  # ✅ save even on 404
                     continue
+                await handle_captcha(page)
 
                 # await page.wait_for_selector('script[type="a-state"]')
 
@@ -76,6 +94,10 @@ async def run_scraper(urls):
                 #     data = json.loads(script_content.strip())
                 #     asin = data.get("asin")
                     # print("ASIN:", asin)
+                html = await page.content()
+                with open("product_detail.html", "w", encoding="utf-8") as f:
+                    f.write(html)
+                print("  💾 HTML saved to product_detail.html")
 
                 image_urls = await get_product_images(page)
 
@@ -94,15 +116,12 @@ async def run_scraper(urls):
                 if match:
                     asin = match.group(1)
                     product["asin"] = asin
-                    # print("ASIN:", asin)
-
-                # print("Canonical URL:", canonical)
 
                 product_data = await get_product_details(page)
                 bullet_texts = await get_bullets(page)
 
                 try:
-                    variant_keys, formatted_variants = await get_variants(page=page, context=context)
+                    variant_keys, formatted_variants = get_variants("product_detail.html")
                     if variant_keys and formatted_variants:
                         product["variant_keys"] = variant_keys
                         product["variants"] = formatted_variants
@@ -192,6 +211,6 @@ async def run_scraper(urls):
             save_products(all_products)  # ✅ save after every single product
             print(f"✅ Done: {product.get('title', url)} — total saved: {len(all_products)}\n")
 
-        await browser.close()
+            await browser.close()
 
     print("✅ All done! Saved all products!")

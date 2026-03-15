@@ -14,8 +14,9 @@ from scraper_modules.get_urls_from_sheet import get_urls_from_sheet
 # )
 # "https://a.co/d/0223Wvxd"
 # print("URLs to scrape:", urls)
-urls=["https://a.co/d/04RiR9F2","https://a.co/d/06NJJkSp"]
+urls=["https://www.amazon.com/dp/B0823MDHDJ?ref=cm_sw_r_cso_cp_apin_dp_SDK6SDW5NPMWR2ZKY5MK&ref_=cm_sw_r_cso_cp_apin_dp_SDK6SDW5NPMWR2ZKY5MK&social_share=cm_sw_r_cso_cp_apin_dp_SDK6SDW5NPMWR2ZKY5MK&th=1"]
 # urls=["https://a.co/d/04RiR9F2"]
+# ,"https://a.co/d/06NJJkSp"
 
 LOGIN_FILE = "amazon_login.json"
 

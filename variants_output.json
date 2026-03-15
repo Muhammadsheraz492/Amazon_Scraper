@@ -1,0 +1,56 @@
+{
+    "variant_keys": [
+        "color_name",
+        "size_name"
+    ],
+    "variants": {
+        "B0823LZ799": {
+            "color_name": "Black Gold",
+            "size_name": "300PCS Numbered Full Set (1, 5, 25, 100, 500)"
+        },
+        "B07ZM56Y3C": {
+            "color_name": "Black Gold",
+            "size_name": "500PCS Non-Numbered Set"
+        },
+        "B0FM7YZ99F": {
+            "color_name": "White Gold",
+            "size_name": "500PCS Non-Numbered Set"
+        },
+        "B0FM7XC9D4": {
+            "color_name": "White Gold",
+            "size_name": "500PCS Numbered Full Set (1,5,25,100,500,1000)"
+        },
+        "B0FM7X1PQQ": {
+            "color_name": "White Gold",
+            "size_name": "500PCS Numbered Core Set (5, 25, 100, 500)"
+        },
+        "B07ZM4KFH1": {
+            "color_name": "Black Gold",
+            "size_name": "300PCS Non-Numbered Set"
+        },
+        "B0FD3LNN4Q": {
+            "color_name": "Black Gold",
+            "size_name": "300PCS Numbered Core Set (5, 25, 100)"
+        },
+        "B0FD3NBH1X": {
+            "color_name": "Black Gold",
+            "size_name": "500PCS Numbered Core Set (5, 25, 100, 500)"
+        },
+        "B0823MDHDJ": {
+            "color_name": "Black Gold",
+            "size_name": "500PCS Numbered Full Set (1,5,25,100,500,1000)"
+        },
+        "B0FM7SSHDB": {
+            "color_name": "White Gold",
+            "size_name": "300PCS Non-Numbered Set"
+        },
+        "B0FM828NM5": {
+            "color_name": "White Gold",
+            "size_name": "300PCS Numbered Core Set (5, 25, 100)"
+        },
+        "B0FM7ZF7PR": {
+            "color_name": "White Gold",
+            "size_name": "300PCS Numbered Full Set (1, 5, 25, 100, 500)"
+        }
+    }
+}

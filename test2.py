@@ -5,7 +5,7 @@ import json
 import json5
 from bs4 import BeautifulSoup
 
-def get_variants(html_file):
+def get_variants_from_html(html_file):
     """Extract variant data from locally saved HTML file."""
     
     with open(html_file, "r", encoding="utf-8") as f:
@@ -59,13 +59,13 @@ def get_variants(html_file):
     return None, None
 
 
-# if __name__ == "__main__":
-#     variant_keys, formatted_variants = get_variants_from_html("product_details.html")
+if __name__ == "__main__":
+    variant_keys, formatted_variants = get_variants_from_html("product_detail.html")
 
-#     if formatted_variants:
-#         with open("variants_output.json", "w", encoding="utf-8") as f:
-#             json.dump({
-#                 "variant_keys": variant_keys,
-#                 "variants": formatted_variants
-#             }, f, indent=4, ensure_ascii=False)
-#         print("✅ Saved to variants_output.json")
+    if formatted_variants:
+        with open("variants_output.json", "w", encoding="utf-8") as f:
+            json.dump({
+                "variant_keys": variant_keys,
+                "variants": formatted_variants
+            }, f, indent=4, ensure_ascii=False)
+        print("✅ Saved to variants_output.json")
